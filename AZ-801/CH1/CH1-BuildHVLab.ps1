@@ -7,7 +7,7 @@ cd C:\AZ801PacktLab
 $VMName='AZ801PacktLab-DC-01','AZ801PacktLab-HV-01','AZ801PacktLab-HV-02','AZ801PacktLab-FS-01'
 $VMExternalSwitch='AZ801PacktLabExternal'
 $VMInternalSwitch='AZ801PacktLabInternal'
-$VMIso='c:\AZ801PacktLab\iso\Server2022Preview.iso'
+$VMIso='c:\AZ801PacktLab\iso\Server2022.iso'
 
 # Create new virtual switch of type External for use in the AZ801PacktLab
 New-VMSwitch -Name $VMExternalSwitch -AllowManagementOS $true -NetAdapterName (Get-NetAdapter | Where-Object {$_.Status -eq "Up" -and !$_.Virtual}).Name
